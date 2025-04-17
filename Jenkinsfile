@@ -2,13 +2,6 @@ pipeline {
     agent any
 
     stages {
-        stage('Clone Repository') {
-            steps {
-                echo '📥 Cloning the GitHub repository...'
-                git branch: 'main', url: 'https://github.com/YOUR_USERNAME/static-site-devops.git'
-            }
-        }
-
         stage('Build Docker Image') {
             steps {
                 echo '🐳 Building Docker image...'
